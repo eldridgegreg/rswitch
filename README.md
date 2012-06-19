@@ -19,3 +19,5 @@ not a hell of a lot that can go wrong.
 
 Please mail corrections, suggestions or questions to greg@desult.com.  I am not an OS X
 expert, so I may be doing something wrong here.
+
+https://github.com/eldridgegreg/rswitch
