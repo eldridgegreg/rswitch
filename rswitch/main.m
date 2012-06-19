@@ -42,24 +42,25 @@ int main(int argc, const char * argv[])
         
         if (!success) { 
             NSLog(@"Could not locate 2880x1800 display mode for main monitor.");
+            return 0;
         }
         
         CGDisplayConfigRef cfg;
         CGError err = CGBeginDisplayConfiguration(&cfg);
         
         if (err != kCGErrorSuccess) {
-            NSLog((__bridge NSString*) CFSTR("FAIL: %u"), err);
+            NSLog((__bridge NSString*) CFSTR("FAILED: %u"), err);
             return 0;
         }
         err = CGConfigureDisplayWithDisplayMode(cfg, main, mode, NULL);
         if (err != kCGErrorSuccess) {
-            NSLog((__bridge NSString*) CFSTR("FAIL: %u"), err);
+            NSLog((__bridge NSString*) CFSTR("FAILED: %u"), err);
             return 0;
         }
 
         err = CGCompleteDisplayConfiguration(cfg, kCGConfigurePermanently);
         if (err != kCGErrorSuccess) {
-            NSLog((__bridge NSString*) CFSTR("FAIL: %u"), err);
+            NSLog((__bridge NSString*) CFSTR("FAILED: %u"), err);
             return 0;
         }
 
