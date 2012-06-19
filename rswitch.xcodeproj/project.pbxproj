@@ -1,0 +1,240 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37B227C1158FF89900D159D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B227C0158FF89900D159D0 /* Foundation.framework */; };
+		37B227C4158FF89900D159D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B227C3158FF89900D159D0 /* main.m */; };
+		37B227C8158FF89900D159D0 /* rswitch.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 37B227C7158FF89900D159D0 /* rswitch.1 */; };
+		37B227CF158FF92400D159D0 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B227CE158FF92400D159D0 /* AppKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		37B227BA158FF89900D159D0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				37B227C8158FF89900D159D0 /* rswitch.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		37B227BC158FF89900D159D0 /* rswitch */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = rswitch; sourceTree = BUILT_PRODUCTS_DIR; };
+		37B227C0158FF89900D159D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		37B227C3158FF89900D159D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37B227C6158FF89900D159D0 /* rswitch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rswitch-Prefix.pch"; sourceTree = "<group>"; };
+		37B227C7158FF89900D159D0 /* rswitch.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = rswitch.1; sourceTree = "<group>"; };
+		37B227CE158FF92400D159D0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37B227B9158FF89900D159D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37B227CF158FF92400D159D0 /* AppKit.framework in Frameworks */,
+				37B227C1158FF89900D159D0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37B227B1158FF89900D159D0 = {
+			isa = PBXGroup;
+			children = (
+				37B227C2158FF89900D159D0 /* rswitch */,
+				37B227BF158FF89900D159D0 /* Frameworks */,
+				37B227BD158FF89900D159D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		37B227BD158FF89900D159D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37B227BC158FF89900D159D0 /* rswitch */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37B227BF158FF89900D159D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37B227CE158FF92400D159D0 /* AppKit.framework */,
+				37B227C0158FF89900D159D0 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37B227C2158FF89900D159D0 /* rswitch */ = {
+			isa = PBXGroup;
+			children = (
+				37B227C3158FF89900D159D0 /* main.m */,
+				37B227C7158FF89900D159D0 /* rswitch.1 */,
+				37B227C5158FF89900D159D0 /* Supporting Files */,
+			);
+			path = rswitch;
+			sourceTree = "<group>";
+		};
+		37B227C5158FF89900D159D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37B227C6158FF89900D159D0 /* rswitch-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37B227BB158FF89900D159D0 /* rswitch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37B227CB158FF89900D159D0 /* Build configuration list for PBXNativeTarget "rswitch" */;
+			buildPhases = (
+				37B227B8158FF89900D159D0 /* Sources */,
+				37B227B9158FF89900D159D0 /* Frameworks */,
+				37B227BA158FF89900D159D0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = rswitch;
+			productName = rswitch;
+			productReference = 37B227BC158FF89900D159D0 /* rswitch */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37B227B3158FF89900D159D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 37B227B6158FF89900D159D0 /* Build configuration list for PBXProject "rswitch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 37B227B1158FF89900D159D0;
+			productRefGroup = 37B227BD158FF89900D159D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37B227BB158FF89900D159D0 /* rswitch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37B227B8158FF89900D159D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37B227C4158FF89900D159D0 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		37B227C9158FF89900D159D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		37B227CA158FF89900D159D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		37B227CC158FF89900D159D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "rswitch/rswitch-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		37B227CD158FF89900D159D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "rswitch/rswitch-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37B227B6158FF89900D159D0 /* Build configuration list for PBXProject "rswitch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37B227C9158FF89900D159D0 /* Debug */,
+				37B227CA158FF89900D159D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37B227CB158FF89900D159D0 /* Build configuration list for PBXNativeTarget "rswitch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37B227CC158FF89900D159D0 /* Debug */,
+				37B227CD158FF89900D159D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37B227B3158FF89900D159D0 /* Project object */;
+}

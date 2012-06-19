@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'rswitch' target in the 'rswitch' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
