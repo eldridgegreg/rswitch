@@ -49,20 +49,22 @@ int main(int argc, const char * argv[])
         CGError err = CGBeginDisplayConfiguration(&cfg);
         
         if (err != kCGErrorSuccess) {
-            NSLog((__bridge NSString*) CFSTR("FAILED: %u"), err);
+            NSLog(@"FAILED: %d", err);
             return 0;
         }
         err = CGConfigureDisplayWithDisplayMode(cfg, main, mode, NULL);
         if (err != kCGErrorSuccess) {
-            NSLog((__bridge NSString*) CFSTR("FAILED: %u"), err);
+            NSLog(@"FAILED: %d", err);
             return 0;
         }
 
         err = CGCompleteDisplayConfiguration(cfg, kCGConfigurePermanently);
         if (err != kCGErrorSuccess) {
-            NSLog((__bridge NSString*) CFSTR("FAILED: %u"), err);
+            NSLog(@"FAILED: %d", err);
             return 0;
         }
+        
+        NSLog(@"Success.");
 
     }
     return 0;
