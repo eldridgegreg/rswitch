@@ -17,33 +17,22 @@ int main(int argc, const char * argv[])
        
         // based on https://developer.apple.com/library/mac/#documentation/graphicsimaging/Conceptual/QuartzDisplayServicesConceptual/Articles/DisplayModes.html
         CGDirectDisplayID main =  CGMainDisplayID();        
-        CGDisplayModeRef mode;
-        CFIndex index, count;
+        CGDisplayModeRef mode, largestMode;
         CFArrayRef modeList;
-        long width, height;
-        BOOL success = NO;
         
         modeList = CGDisplayCopyAllDisplayModes (main, NULL);
-        count = CFArrayGetCount (modeList);
+        CFIndex count = CFArrayGetCount (modeList);
         
-        for (index = 0; index < count; index++) // 4
+        largestMode = (CGDisplayModeRef)CFArrayGetValueAtIndex (modeList, 0);
+        for (CFIndex index = 1; index < count; index++) // 4
         {
             mode = (CGDisplayModeRef)CFArrayGetValueAtIndex (modeList, index);
-            height = CGDisplayModeGetHeight(mode);
-            width = CGDisplayModeGetWidth(mode);
-            
-            if (width == 2880 && height == 1800) {
-                success = YES;
-                break;
+            if(CGDisplayModeGetWidth(mode) > CGDisplayModeGetWidth(largestMode) || CGDisplayModeGetHeight(mode) > CGDisplayModeGetHeight(largestMode)) {
+                largestMode = mode;
             }
         }
 
         CFRelease(modeList);
-        
-        if (!success) { 
-            NSLog(@"Could not locate 2880x1800 display mode for main monitor.");
-            return 0;
-        }
         
         CGDisplayConfigRef cfg;
         CGError err = CGBeginDisplayConfiguration(&cfg);
@@ -52,7 +41,7 @@ int main(int argc, const char * argv[])
             NSLog(@"FAILED: %d", err);
             return 0;
         }
-        err = CGConfigureDisplayWithDisplayMode(cfg, main, mode, NULL);
+        err = CGConfigureDisplayWithDisplayMode(cfg, main, largestMode, NULL);
         if (err != kCGErrorSuccess) {
             NSLog(@"FAILED: %d", err);
             return 0;
