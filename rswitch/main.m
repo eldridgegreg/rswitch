@@ -19,6 +19,7 @@ int main(int argc, const char * argv[])
         CGDirectDisplayID main =  CGMainDisplayID();        
         CGDisplayModeRef mode, largestMode;
         CFArrayRef modeList;
+        CFStringRef bpp_str;
         
         modeList = CGDisplayCopyAllDisplayModes (main, NULL);
         CFIndex count = CFArrayGetCount (modeList);
@@ -27,9 +28,13 @@ int main(int argc, const char * argv[])
         for (CFIndex index = 1; index < count; index++) // 4
         {
             mode = (CGDisplayModeRef)CFArrayGetValueAtIndex (modeList, index);
-            if(CGDisplayModeGetWidth(mode) > CGDisplayModeGetWidth(largestMode) || CGDisplayModeGetHeight(mode) > CGDisplayModeGetHeight(largestMode)) {
+            bpp_str = CGDisplayModeCopyPixelEncoding(mode);
+            CFIndex bpp = CFStringGetLength(bpp_str);
+            CFRelease(bpp_str);
+            if(bpp == 32 && (CGDisplayModeGetWidth(mode) > CGDisplayModeGetWidth(largestMode) || CGDisplayModeGetHeight(mode) > CGDisplayModeGetHeight(largestMode))) {
                 largestMode = mode;
             }
+            
         }
 
         CFRelease(modeList);
